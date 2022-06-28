@@ -29,7 +29,7 @@ form.addEventListener("submit", e => {
   const listItems = list.querySelectorAll(".ajax-section .city");
   const inputVal = input.value;
 
-  const url = `https://cors-anywhere.simple-weather-app1234.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=${inputVal}&APPID=process.env.api_key&units=metric`;
+  const url = `https://cors-anywhere.simple-weather-app1234.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=${inputVal}&APPID=${process.env.api_key}&units=metric`;
 
   fetch(url, { mode: 'cors' })
     .then((response) => response.json())
